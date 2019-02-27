@@ -1,0 +1,31 @@
+%% Author: Edgar Tejada
+%%This is a list of references and explanations for assignment 06:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 06 \\\medskip Implementing Gaussian Elimination and LU Substitution}
+\author{Edgar Tejada ([REDACTED])\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{Gaussian Elimination}
+\indent [U, f] = gaussian_elimination(A,b)
+\indent \indent This function takes a given square matrix A, a vector 'b'of correct size, and solves A*x = b via fundemental row operations THAT DO NOT alter the column space nor the null space of A such that we get a U matrix and f vector such that U*x = f, and U is either upper triangular or lower triangular. This function must gracefully handle systems with non-unique and non-existant solutions.
+
+\newpage
+\section{LU Factorization}
+\indent [L,U] = LU_factorization(A)
+\indent \indent  This function breaks down a given square matrix A into two equal size square matricies, L and U, such that L is lower triangular, U is upper triangular, and L*U = A by conventional matrix multiplication. This is acheived via backward and forward substitution so as to achieve 'partial pivoting'. This function must gracefully handle systems with non-unique, non-existant solutions, and non-deterministic solutions (families of solutions).
+
+
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}

@@ -1,0 +1,26 @@
+%% Author: Edgar Tejada
+%%This is a list of references and explanations for assignment 07:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 7 \\\medskip Iterative Approach to Approximating Linear Systems}
+\author{Edgar Tejada ([REDACTED])\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{Gauss Seidel Method}
+\indent [x, err, N] = gauss_seidel(A,b,x,tol,Nmax)
+\indent \indent This function will return an estimate solution to the system Ax=b using gauss-seidel iteration and will stop once we are either within an acceptable error, or have hit our Nmax # of cycles. Vectors A, b, and an initial guess to the system x0 for Ax=b. A desired accuracy 'tol', and a user defined max number of cycles called 'Nmax' must be given as inputs. This function should return the possible solution vector x, the maximum error value, and the N number of cycles we went through (or a graceful failure warning).
+
+
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}
