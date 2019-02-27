@@ -1,0 +1,43 @@
+%% Author: Edgar Tejada
+%This is a list of references and explanations for this extra credit assignment 03:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 03 \\\medskip Numerical Approximations of Derivatives and Integrals}
+\author{Edgar Tejada ([REDACTED])\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{Composite Trapezoid Method}
+\indent composite_trapezoid(f, a, b, n)
+\indent \indent This function approximates the integral under a piece-wise continous funciton f(x) between the intervals of a and b using 'n' number of small trapezoids and calculating each's geometric area. At the end, the returned integral is the area of said trapezoids. 
+
+\newpage
+\section{Composite Simpson's Rule}
+\indent composite_simpsons(f, a, b, n)
+\indent \indent This function approximates the integral under a piece-wise continous funciton f(x) between the intervals of a and b using 'n' number of small parabolas and calculating each's geometric area. At the end, the returned integral is the area of said parabolas, but minus any over counted area. Notice, 'n' must be trunacated the closest even integer, or this method fails. 
+
+\newpage
+\section{Various Deriviative Approximations}
+\indent forwardpt(n, x0, f, h)
+\indent threeptCD(n, x0, f, h)
+\indent fiveptCD(n, x0, f, h)
+\indent \indent These three functions are exactly what they say on the tin, they approximate the instantaneous deriviative of a function f(x) at a given point of interest x0, with 'n' cycles and 'h' tolerance. Forwardpoint method uses one point, three point uses three, and five point uses five, all in equal distanc from x0.
+
+
+\newpage
+\section{Sources:}
+Dr. Douglas Wilhelm Harder's expected behavior for composite trapezoid rule
+\indent https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/comptrap/matlab.html
+
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}

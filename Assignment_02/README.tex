@@ -1,0 +1,38 @@
+%% Author: Edgar Tejada
+%This is a list of references and explinations for this extra credit assignment 02:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 02 \\\medskip Polynomial Interpolation Mathods}
+\author{Edgar Tejada ([REDACTED])\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{The Lagrange Polynomial}
+
+\indent Lagrange_poly(xinterval,datx,daty)
+\indent \indent This function generates an array of points representing the fuction P(x) along the given interval xinterval, which is a matlab array of points. P(x) is generated from datx mapping to daty and being fit to lowest power polynomial that fits each point in datx to daty. This generation uses something akin to the Vandermonde Determinant method of lowest power interpolation. THESE 'dat' ARRAYS MUST BE OF EQUAL LENGTH, or unsafe out of bounds error will occur.
+
+\newpage
+\section{Newton's Divided Difference}
+
+\indent Newtons_divided_differences(x,datx,daty)
+\indent \indent This function generates an array of points representing the fuction P(x) along the given interval xinterval, which is a matlab array of points. P(x) is generated from datx mapping to daty and being fit to lowest power polynomial that fits each point in datx to daty. This generation uses Newton's Polynomials approach  to find the  lowest power interpolation, because Newton was crazy prolific and has hundreds of methods named after him. THESE 'dat' ARRAYS MUST BE OF EQUAL LENGTH, or unsafe outof bounds error will occur.
+
+
+
+\newpage
+\section{Sources:}
+How to generate matricies of function handles proposed by SE User 'N.C. Rolly'
+\indent https://stackoverflow.com/q/3400515
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}
