@@ -1,0 +1,48 @@
+%% Author: Edgar Tejada
+%This is a list of references for this extra credit assignment 01:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 01 \\\medskip Root Finding Methods}
+\author{Edgar Tejada (etejada@ucmerced.edu)\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{The Bisection Method}
+bisection_method.m houses the function
+
+\indent bisection_method(f,a,b,tol,N)
+\indent \indent This function finds the root of a function f(x), that is where f(x) = 0 between the interval of reals a to b, with a given tolerance of 'tol' and with a cap 'N' number of cylces. This method uses divide and conquer approach, and divides the suspect area with a root into halves until it finds a root, or hits N cylces.
+
+\newpage
+\section{Fixed Point Iteration}
+
+\indent fixed_point_iteration(g,x0,tol,N)
+\indent \indent This function find the root of a funciton g(x), that is where g(x) = 0, around the intitial guess for the root 'x0' and within a given tolerance of 'tol' and with a cap 'N' number of cylces. This method uses fixed point iteration, which is a recursive call to itself, to find the root or until it hits N cycles.
+
+\newpage
+\section{Newton's (Numerical) Method}
+\indent Newtons_method(f,fp,x0,tol,N)
+\indent \indent This function find the root of a funciton f(x), where f(x) = 0. This is one of many of Newton's contribution to math, and in this case we use f(x), the function's deriviative fp(x), and initial guess x0 to find the root within a given tolerance of 'tol' and with a cap 'N' number of cylces. This method requires that deriviative of f is at least piece-wise continous around x0, otherwise unsafe division by zero will occur!
+
+\newpage
+\section{Secant Method}
+\indent secant_method(f,x0,x1, tol,N)
+\indent \indent This function find the root of a funciton f(x), where f(x) = 0. This is easier version of Newton's Method (see above), and in this case we use f(x), alone, and two initial guess, x0 and x1, to find the root within a given tolerance of 'tol' and with a cap 'N' number of cylces. This method approximates the deriviative of f as the slope of the line between x0 and x1, otherwise unsafe division by zero will occur!
+
+\newpage
+\section{Sources:}
+How to plot y-axis taken from SA user Austin A:
+\indent https://stackoverflow.com/a/25706706 
+
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}
