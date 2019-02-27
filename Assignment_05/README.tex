@@ -1,0 +1,47 @@
+%% Author: Edgar Tejada
+%%This is a list of references and explanations for assignment 05:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 05 \\\medskip Methods For Solving Second Order ODE's}
+\author{Edgar Tejada ([REDACTED])\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{Adams–Bashforth's Method with Four}
+\indent AB4(f, a, b, alpha, N)
+\indent \indent This function approximates solution to given second order differential equation. Here, alpha is the initial value to this IVP, N are the max number of cycles allowed, and (b-a)/N its the set time step for this method. Adams–Bashforth's Method with Four uses four previous stages of the results given from Euler's Method in new iteration, meaning this method requires at least the first two solutions to the IVP be known (and feed into Euler's Method).
+
+\newpage
+\section{Adams-Moulton's Method with Four}
+\indent AM4(f, a, b, alpha, N)
+\indent \indent This function approximates solution to given second order differential equation. Here, alpha is the initial value to this IVP, N are the max number of cycles allowed, and (b-a)/N its the set time step for this method. Adams–Moulton's Method with Four uses four previous stages of the results given from RK4 (see below) in new iteration, meaning this method requires at least the first solution to the IVP be known (and feed into Euler's Method). 
+%NOTICE: this implementation uses the solve() and syms, both part of symbolic operations. In octave, this requires installing the 'octave-symbolic' library. This seems to come pre-installed with MATLAB R2018b, but has not been tested on earlier installs.
+
+\newpage
+\section{Runga Kuta with Two}
+\indent RK2(f, a, b, alpha, N)
+\indent \indent This function approximates solution to given second order differential equation. Here, alpha is the initial value to this IVP, N are the max number of cycles allowed, and (b-a)/N its the set time step for this method. Runga Kuta with Two uses two previous stages of the results given in new iteration, meaning this method requires at least the first two solutions to the IVP must be known.
+
+\newpage
+\section{Runga Kuta with Four}
+\indent RK4(f, a, b, alpha, N)
+\indent \indent This function approximates solution to given second order differential equation. Here, alpha is the initial value to this IVP, N are the max number of cycles allowed, and (b-a)/N its the set time step for this method. Runga Kuta with Four uses four previous stages of the results given in new iteration, meaning this method requires at least the first four solutions to the IVP be known (or reasonably approximated).
+
+
+\newpage
+\section{Sources:}
+Wikiversity's excelent article on various methods for solving second order ODE's
+\indent  Wikiversity: https://en.wikiversity.org/wiki/Adams-Bashforth_and_Adams-Moulton_methods
+
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}

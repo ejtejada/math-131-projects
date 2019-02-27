@@ -1,0 +1,32 @@
+%% Author: Edgar Tejada
+%%This is a list of references and explanations for assignment 04:
+
+
+\documentclass [12pt]{article}
+\title{Assignment 04 \\\medskip Euler's Method For Solving First Order ODE's}
+\author{Edgar Tejada ([REDACTED])\\University of California, Merced}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, bibencoding=utf8, style=science, citestyle=numeric]{biblatex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{Euler's Method}
+\indent euler_timestep(f,a,b,alpha,N)
+\indent \indent This function approximates solution to given first order differential equation. Here, alpha is the initial value to this IVP, N are the max number of cycles allowed, and (b-a)/N its the set time step for this method. Euler's method uses a taylor expansion for y'(t) and truncates the expanded result to only the first two terms (which is great for run time, not so much of accuracy).
+
+
+
+\newpage
+\section{Sources:}
+Wikipedia's excelent article on Euler's Method for solving ODE's
+\indent https://en.wikipedia.org/wiki/Euler_method
+
+
+\nocite{*} 
+\printbibliography
+
+
+
+\end{document}
